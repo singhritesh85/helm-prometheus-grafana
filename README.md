@@ -25,8 +25,8 @@ helm repo update
 ```
 helm install prometheus prometheus-community/prometheus \
 --namespace monitoring \
---set alertmanager.persistentVolume.storageClass="standard" \
---set server.persistentVolume.storageClass="standard"
+--set alertmanager.persistentVolume.storageClass="aws-efs" \
+--set server.persistentVolume.storageClass="aws-efs"
 ```
 
 ## Create grafana.yaml
