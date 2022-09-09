@@ -50,7 +50,7 @@ EoF
 ```
 helm install grafana grafana/grafana \
     --namespace monitoring \
-    --set persistence.storageClassName="standard" \
+    --set persistence.storageClassName="aws-efs" \
     --set persistence.enabled=true \
     --set adminPassword='subje' \
     --values ${HOME}/environment/grafana/grafana.yaml \
